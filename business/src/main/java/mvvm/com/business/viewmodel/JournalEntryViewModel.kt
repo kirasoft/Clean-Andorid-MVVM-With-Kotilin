@@ -2,17 +2,16 @@ package mvvm.com.business.viewmodel
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
-import mvvm.com.business.model.News
+import mvvm.com.business.model.JournalEntry
 
-
-class NewsItemViewModel(newsItem: News) : ViewModel() {
+class JournalEntryViewModel(journalEntry: JournalEntry) : ViewModel() {
 
     val title = MutableLiveData<String>()
     val content = MutableLiveData<String>()
 
     init {
-        this.title.postValue(newsItem.title)
-        this.content.postValue(newsItem.content)
+        this.title.postValue(journalEntry.title)
+        this.content.postValue(journalEntry.content)
     }
 
 

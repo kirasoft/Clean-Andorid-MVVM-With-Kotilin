@@ -2,15 +2,12 @@ package mvvm.com.mvvm
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
-import android.databinding.BindingAdapter
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 import mvvm.com.business.viewmodel.MainViewModel
-import mvvm.com.business.viewmodel.NewsItemViewModel
 import mvvm.com.mvvm.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -32,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupRecyclerView() {
         newsRecyclerView.setHasFixedSize(true)
         newsRecyclerView.layoutManager = LinearLayoutManager(this)
-        val adapter = NewsAdapter(this, emptyList())
+        val adapter = JournalEntryAdapter(this, emptyList())
         newsRecyclerView.adapter = adapter
         viewModel.newsItemViewHolderList.observe(this, Observer {
             if (it?.isNotEmpty() == true){

@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
-            name="newsViewModel"
-            type="mvvm.com.business.viewmodel.NewsItemViewModel"/>
+            name="journalEntryViewModel"
+            type="mvvm.com.business.viewmodel.JournalEntryViewModel"/>
     </data>
 
     <LinearLayout
@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{newsViewModel.title}"/>
+            android:text="@{journalEntryViewModel.title}"/>
 
 
     </LinearLayout>

@@ -1,6 +1,6 @@
 package mvvm.com.business.model
 
-data class News(
+data class JournalEntry(
         var title: String? = "",
         var content: String? = ""
 )
