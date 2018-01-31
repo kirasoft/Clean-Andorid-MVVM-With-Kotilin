@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import mvvm.com.business.viewmodel.JournalEntryViewModel
+import mvvm.com.mvvm.databinding.JournalEntryItemBinding
 
 class JournalEntryAdapter(private val lifecycleOwner: LifecycleOwner, private var entryList: List<JournalEntryViewModel>): RecyclerView.Adapter<JournalEntryViewHolder>() {
 
@@ -18,9 +19,9 @@ class JournalEntryAdapter(private val lifecycleOwner: LifecycleOwner, private va
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): JournalEntryViewHolder {
-        val entryBinding = DataBindingUtil.inflate<JournalEntryBinding>(
+        val entryBinding = DataBindingUtil.inflate<JournalEntryItemBinding>(
                 LayoutInflater.from(parent.context),
-                R.layout.news_item,
+                R.layout.journal_entry_item,
                 parent,
                 false)
         return JournalEntryViewHolder(entryBinding)
